@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-sm-12 text-center">
+      {% if messages %}
+        {% for message in messages %}
+            {% if message.tags == 'error' %}
+                <p class="text-danger">{{ message }}</p>
+            {% else %}
+                <p class="text-success">{{ message }}</p>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+    </div>
+</div>
